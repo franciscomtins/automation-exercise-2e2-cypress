@@ -1,0 +1,18 @@
+{
+  "name": "automation-exercise-e2e-cypress",
+  "version": "1.0.0",
+  "description": "Testes E2E do site Automation Exercise com Cypress",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run",
+    "test:chrome": "cypress run --browser chrome"
+  },
+  "keywords": [],
+  "author": "Francisco Martins",
+  "license": "MIT",
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "cypress": "^16.2.1",
+    "cypress-mochawesome-reporter": "^3.8.4"
+  }
+}
