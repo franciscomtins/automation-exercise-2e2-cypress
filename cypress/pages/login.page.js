@@ -3,6 +3,10 @@
  */
 class LoginPage {
   selectors = {
+    loginForm: '.login-form',
+    loginEmail: '[data-qa="login-email"]',
+    loginPassword: '[data-qa="login-password"]',
+    loginButton: '[data-qa="login-button"]',
     signupForm: '.signup-form',
     signupName: '[data-qa="signup-name"]',
     signupEmail: '[data-qa="signup-email"]',
@@ -11,6 +15,16 @@ class LoginPage {
 
   visit() {
     cy.visit('/login')
+  }
+
+  shouldShowLoginForm() {
+    cy.contains(`${this.selectors.loginForm} h2`, 'Login to your account').should('be.visible')
+  }
+
+  login({ email, password }) {
+    cy.get(this.selectors.loginEmail).type(email)
+    cy.get(this.selectors.loginPassword).type(password, { log: false })
+    cy.get(this.selectors.loginButton).click()
   }
 
   shouldShowSignupForm() {
