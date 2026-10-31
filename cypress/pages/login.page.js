@@ -12,6 +12,7 @@ class LoginPage {
     signupName: '[data-qa="signup-name"]',
     signupEmail: '[data-qa="signup-email"]',
     signupButton: '[data-qa="signup-button"]',
+    signupError: '.signup-form form p',
   }
 
   visit() {
@@ -42,6 +43,12 @@ class LoginPage {
     cy.get(this.selectors.signupName).type(name)
     cy.get(this.selectors.signupEmail).type(email)
     cy.get(this.selectors.signupButton).click()
+  }
+
+  shouldShowEmailAlreadyExistsError() {
+    cy.get(this.selectors.signupError)
+      .should('be.visible')
+      .and('have.text', 'Email Address already exist!')
   }
 }
 
