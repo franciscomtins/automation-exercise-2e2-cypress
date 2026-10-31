@@ -1,3 +1,7 @@
 {
-  "searchTerms": ["Jeans", "Saree"]
+  "searchTerms": ["Jeans", "Saree"],
+  "cartProducts": [
+    { "id": 1, "name": "Blue Top" },
+    { "id": 2, "name": "Men Tshirt" }
+  ]
 }

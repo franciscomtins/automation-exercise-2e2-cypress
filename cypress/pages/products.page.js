@@ -9,6 +9,9 @@ class ProductsPage {
     productName: '.productinfo p',
     searchInput: '#search_product',
     searchButton: '#submit_search',
+    addToCartButton: (productId) => `.productinfo .add-to-cart[data-product-id="${productId}"]`,
+    cartModal: '#cartModal',
+    continueShoppingButton: '#cartModal .close-modal',
   }
 
   shouldShowAllProducts() {
@@ -19,6 +22,15 @@ class ProductsPage {
 
   viewFirstProduct() {
     cy.get(this.selectors.productCard).first().find(this.selectors.viewProductLink).click()
+  }
+
+  addProductsToCart(products) {
+    products.forEach(({ id }) => {
+      cy.get(this.selectors.addToCartButton(id)).click()
+      cy.get(this.selectors.cartModal).should('be.visible')
+      cy.get(this.selectors.continueShoppingButton).click()
+      cy.get(this.selectors.cartModal).should('not.be.visible')
+    })
   }
 
   search(term) {
