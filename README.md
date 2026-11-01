@@ -1,13 +1,13 @@
-# Automation Exercise — Testes E2E com Cypress
+# Automation Exercise - Testes E2E com Cypress
 
 Automação de testes end-to-end do site [Automation Exercise](https://www.automationexercise.com/), desenvolvida como trabalho de conclusão da disciplina de Automação de Testes de Software.
 
 ## Tecnologias
 
-- [Cypress](https://www.cypress.io/) — framework de testes E2E
-- [@faker-js/faker](https://fakerjs.dev/) — geração de massa de dados
-- [cypress-mochawesome-reporter](https://github.com/LironEr/cypress-mochawesome-reporter) — relatório HTML
-- GitHub Actions — integração contínua
+- [Cypress](https://www.cypress.io/) - framework de testes E2E
+- [@faker-js/faker](https://fakerjs.dev/) - geração de massa de dados
+- [cypress-mochawesome-reporter](https://github.com/LironEr/cypress-mochawesome-reporter) - relatório HTML
+- GitHub Actions - integração contínua
 
 ## Estrutura do projeto
 
